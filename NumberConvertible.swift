@@ -81,7 +81,6 @@ extension NumberConvertible {
 @inlinable public func + <T: NumberConvertible, U: NumberConvertible, V: NumberConvertible>(rhs: T, lhs: U) -> V {
     lhs.convert() + rhs.convert()
 }
-
 @inlinable public func - <T: NumberConvertible, U: NumberConvertible, V: NumberConvertible>(rhs: T, lhs: U) -> V {
     lhs.convert() - rhs.convert()
 }
