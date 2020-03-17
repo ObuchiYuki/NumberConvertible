@@ -45,7 +45,7 @@ extension Int32   : NumberConvertible {}
 extension UInt64  : NumberConvertible {}
 extension Int64   : NumberConvertible {}
 extension UInt    : NumberConvertible {}
-extension CGFloat : NumberConvertible{
+extension CGFloat : NumberConvertible {
     @inlinable public init(_ value: CGFloat){
         self = value
     }
