@@ -104,31 +104,30 @@ extension NumberConvertible {
     rhs = rhs / lhs.convert()
 }
 
-@inlinable public func == <T:NumberConvertible, U:NumberConvertible> (lhs: T, rhs: U) -> Bool {
-    return lhs == rhs.convert()
+@inlinable public func == <T:NumberConvertible, U:NumberConvertible>(lhs: T, rhs: U) -> Bool {
+    lhs == rhs.convert()
 }
-@inlinable public func != <T:NumberConvertible, U:NumberConvertible> (lhs: T, rhs: U) -> Bool {
-    return lhs != rhs.convert()
+@inlinable public func != <T:NumberConvertible, U:NumberConvertible>(lhs: T, rhs: U) -> Bool {
+    lhs != rhs.convert()
 }
-@inlinable public func >= <T:NumberConvertible, U:NumberConvertible> (lhs: T, rhs: U) -> Bool {
-    return lhs >= rhs.convert();
+@inlinable public func >= <T:NumberConvertible, U:NumberConvertible>(lhs: T, rhs: U) -> Bool {
+    lhs >= rhs.convert()
 }
-@inlinable public func > <T:NumberConvertible, U:NumberConvertible>  (lhs: T, rhs: U) -> Bool {
-    return lhs > rhs.convert();
+@inlinable public func > <T:NumberConvertible, U:NumberConvertible>(lhs: T, rhs: U) -> Bool {
+    lhs > rhs.convert()
 }
-@inlinable public func <= <T:NumberConvertible, U:NumberConvertible> (lhs: T, rhs: U) -> Bool {
-    return lhs <= rhs.convert();
+@inlinable public func <= <T:NumberConvertible, U:NumberConvertible>(lhs: T, rhs: U) -> Bool {
+    lhs <= rhs.convert()
 }
-@inlinable public func < <T:NumberConvertible, U:NumberConvertible>  (lhs: T, rhs: U) -> Bool {
-    return lhs < rhs.convert();
+@inlinable public func < <T:NumberConvertible, U:NumberConvertible>(lhs: T, rhs: U) -> Bool {
+    lhs < rhs.convert()
 }
 
 @inlinable public func ?? <T: NumberConvertible, U: NumberConvertible, V:NumberConvertible>(lhs: T?, rhs: U) -> V {
-    let v: V? = lhs?.convert()
-    return v == nil ? rhs.convert() : v!
+    lhs?.convert() ?? rhs.convert()
 }
 
 prefix operator ~~
 @inlinable public prefix func ~~<T: NumberConvertible, U: NumberConvertible>(lhs: T) -> U {
-    return lhs.convert()
+    lhs.convert()
 }
